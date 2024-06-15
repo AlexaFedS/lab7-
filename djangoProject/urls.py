@@ -21,6 +21,10 @@ from disease.views import GerCSRFToken, LogoutView, auth_view, CheckAuthView, Re
 
 router = routers.DefaultRouter()
 router.register(r'diseases', disease_views.DiseaseViewSet)
+router.register(r'users', disease_views.UserViewSet)
+router.register(r'story', disease_views.HistoryViewSet)
+router.register(r'set', disease_views.SetDiseaseViewSet)
+router.register(r'sets', disease_views.SetDiseaseViewSetUsers)
 
 urlpatterns = [
     path('', include(router.urls)),
